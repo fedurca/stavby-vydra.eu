@@ -4,33 +4,32 @@ const I18N = {
     "nav.services":"Služby","nav.about":"O nás","nav.references":"Reference","nav.contact":"Kontakt",
     "hero.eyebrow":"Demoliční práce · Bourání · Recyklace",
     "hero.title":"BOURÁME RYCHLE,<br>BEZPEČNĚ A ČISTĚ",
-    "hero.subtitle":"STAVBY-VYDRA s.r.o. — profesionální demoliční firma s vlastní těžkou technikou. Realizujeme demolice průmyslových objektů, rodinných domů i selektivní bourání po celé ČR.",
+    "hero.subtitle":"STAVBY-VYDRA s.r.o. — profesionální demoliční firma s vlastní těžkou technikou.",
     "hero.ctaPrimary":"Poptat demolici →","hero.ctaSecondary":"Naše služby",
     "hero.stat1":"let zkušeností","hero.stat2":"realizací","hero.stat3":"h pohotovost",
     "services.eyebrow":"Co děláme","services.title":"Kompletní demoliční servis",
     "services.intro":"Od přípravy projektu, přes samotnou demolici, až po odvoz a recyklaci suti — vše pod jednou střechou.",
-    "services.s1.title":"Demolice objektů","services.s1.desc":"Bourání rodinných domů, hal, průmyslových objektů a komínů. Strojní i selektivní demolice s důrazem na bezpečnost.",
-    "services.s2.title":"Zemní práce","services.s2.desc":"Výkopové práce, hloubení základů, terénní úpravy a příprava staveniště s vlastními bagry a nakladači.",
-    "services.s3.title":"Recyklace suti","services.s3.desc":"Drcení betonu a cihel, třídění a odvoz odpadu. Ekologická likvidace stavebního materiálu s certifikací.",
+    "services.s1.title":"Demolice objektů","services.s1.desc":"Bourání rodinných domů, hal, průmyslových objektů a komínů.",
+    "services.s2.title":"Zemní práce","services.s2.desc":"Výkopové práce, hloubení základů, terénní úpravy a příprava staveniště.",
+    "services.s3.title":"Recyklace suti","services.s3.desc":"Drcení betonu a cihel, třídění a odvoz odpadu. Ekologická likvidace.",
     "about.eyebrow":"O firmě","about.title":"STAVBY-VYDRA s.r.o.",
-    "about.lead":"Rodinná stavební a demoliční firma se sídlem v Evani. Pracujeme po celé České republice a stavíme na poctivém řemesle a moderní technice.",
-    "about.p1":"Specializujeme se na komplexní demoliční práce — od malých bouracích zakázek po velké průmyslové demolice. Disponujeme vlastním parkem těžké techniky včetně pásových bagrů s hydraulickými kladivy a nůžkami.",
-    "about.p2":"Každou zakázku řešíme individuálně. Vyhotovíme bourací postup, zajistíme všechna povolení a kompletní logistiku včetně odvozu a likvidace materiálu.",
+    "about.lead":"Rodinná stavební a demoliční firma se sídlem v Evani.",
+    "about.p1":"Specializujeme se na komplexní demoliční práce — od malých bouracích zakázek po velké průmyslové demolice.",
+    "about.p2":"Každou zakázku řešíme individuálně. Vyhotovíme bourací postup, zajistíme všechna povolení a logistiku.",
     "about.ico":"IČO","about.seat":"Sídlo","about.seatValue":"Evaň, Česká republika","about.field":"Obor","about.fieldValue":"Demoliční práce",
     "ft.1":"BOZP & certifikace","ft.2":"Vlastní technika","ft.3":"Ekologická likvidace","ft.4":"Termíny dle dohody",
     "refs.eyebrow":"Reference","refs.title":"Vybrané realizace",
-    "refs.r1.title":"Demolice průmyslové haly","refs.r1.loc":"Litoměřice","refs.r1.desc":"Kompletní demolice ocelové haly 2 400 m² včetně odvozu a recyklace materiálu.",
-    "refs.r2.title":"Bourání rodinného domu","refs.r2.loc":"Roudnice nad Labem","refs.r2.desc":"Selektivní demolice zděného RD, příprava pozemku pro novostavbu.",
-    "refs.r3.title":"Demolice komínu","refs.r3.loc":"Ústí nad Labem","refs.r3.desc":"Strojní bourání cihlového komínu výšky 38 m s minimálním omezením provozu.",
+    "refs.r1.title":"Demolice průmyslové haly","refs.r1.loc":"Litoměřice","refs.r1.desc":"Kompletní demolice ocelové haly 2 400 m².",
+    "refs.r2.title":"Bourání rodinného domu","refs.r2.loc":"Roudnice nad Labem","refs.r2.desc":"Selektivní demolice zděného RD.",
+    "refs.r3.title":"Demolice komínu","refs.r3.loc":"Ústí nad Labem","refs.r3.desc":"Strojní bourání cihlového komínu výšky 38 m.",
     "contact.eyebrow":"Spojte se s námi","contact.title":"Pošlete nám poptávku",
     "contact.lead":"Odpovídáme do 24 hodin. Ocenění zakázky a konzultace zdarma.",
     "contact.phone":"Telefon","contact.email":"E-mail","contact.address":"Adresa","contact.hours":"Provoz","contact.hoursValue":"Po–Pá 7:00 – 17:00",
     "contact.form.name":"Jméno a příjmení","contact.form.phone":"Telefon","contact.form.email":"E-mail","contact.form.message":"Popis zakázky",
-    "contact.form.submit":"Odeslat poptávku →","contact.form.success":"Děkujeme, ozveme se vám co nejdříve.",
-    "footer.tag":"Demoliční a stavební firma","footer.rights":"Všechna práva vyhrazena.",
+    "contact.form.submit":"Odeslat poptávku →","contact.form.success":"Děkujeme, zkontrolujte si prosím e-mail pro potvrzení.",
+    "footer.tag":"Demoliční a stavební firma","footer.rights":"Všechna práva vyhrazena."
   },
-  en: {}, // Ponechte dle vaší potřeby
-  de: {}  // Ponechte dle vaší potřeby
+  en: {}, de: {}
 };
 
 /* ============ Jazyk ============ */
@@ -63,7 +62,7 @@ try{
   }
 }catch(e){}
 
-/* ============ Header / mobile nav ============ */
+/* ============ Header ============ */
 const header = document.getElementById("header");
 const onScroll = ()=> header.classList.toggle("scrolled", window.scrollY > 20);
 window.addEventListener("scroll", onScroll); onScroll();
@@ -74,13 +73,30 @@ mobileNav?.querySelectorAll("a").forEach(a=> a.addEventListener("click", ()=> mo
 
 document.getElementById("year").textContent = new Date().getFullYear();
 
-/* ============ Kontakt (API worker) ============ */
+/* ============ Fingerprint & Form (API worker) ============ */
+function collectClientInfo() {
+  return {
+    userAgent: navigator.userAgent,
+    language: navigator.language,
+    languages: navigator.languages ? navigator.languages.join(", ") : "",
+    platform: navigator.platform || (navigator.userAgentData ? navigator.userAgentData.platform : "Neznámá"),
+    screenResolution: `${window.screen.width}x${window.screen.height}`,
+    timeZone: Intl.DateTimeFormat().resolvedOptions().timeZone
+  };
+}
+
 const contactForm = document.getElementById("contactForm");
 if(contactForm) {
+  let isSubmitting = false; // Zámek proti dvojitému odeslání
+
   contactForm.addEventListener("submit", async e => {
     e.preventDefault();
-    const form = e.target;
-    const submitBtn = form.querySelector('button[type="submit"]');
+    e.stopImmediatePropagation();
+
+    if (isSubmitting) return; 
+    isSubmitting = true;
+
+    const submitBtn = contactForm.querySelector('button[type="submit"]');
     const successMsg = document.getElementById("formSuccess");
     const errorMsg = document.getElementById("formError");
 
@@ -89,7 +105,12 @@ if(contactForm) {
     if(submitBtn) submitBtn.disabled = true;
 
     try {
-      const payload = Object.fromEntries(new FormData(form).entries());
+      const formData = new FormData(contactForm);
+      const payload = Object.fromEntries(formData.entries());
+      
+      // Přidání klientských informací do payloadu
+      payload.clientInfo = collectClientInfo();
+
       const response = await fetch("https://form.stavby-vydra.eu", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -98,8 +119,8 @@ if(contactForm) {
 
       if (response.ok) {
         if(successMsg) successMsg.classList.remove("hidden");
-        form.reset();
-        setTimeout(() => successMsg.classList.add("hidden"), 6000);
+        contactForm.reset();
+        setTimeout(() => successMsg.classList.add("hidden"), 8000);
       } else {
         throw new Error("API error");
       }
@@ -107,6 +128,16 @@ if(contactForm) {
       if(errorMsg) errorMsg.classList.remove("hidden");
     } finally {
       if(submitBtn) submitBtn.disabled = false;
+      isSubmitting = false; // Uvolnění zámku
     }
   });
 }
+
+// Zpracování parametru '?confirmed=1' v URL po přesměrování
+window.addEventListener('DOMContentLoaded', () => {
+  const urlParams = new URLSearchParams(window.location.search);
+  if (urlParams.get('confirmed') === '1') {
+    alert("Děkujeme! Vaše poptávka byla úspěšně potvrzena.");
+    window.history.replaceState({}, document.title, window.location.pathname);
+  }
+});
