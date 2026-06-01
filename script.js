@@ -29,8 +29,8 @@ const I18N = {
     "contact.form.submit":"Odeslat poptávku →","contact.form.success":"Děkujeme, ozveme se vám co nejdříve.",
     "footer.tag":"Demoliční a stavební firma","footer.rights":"Všechna práva vyhrazena.",
   },
-  en: { /* ... ponechte vaši anglickou lokalizaci ... */ },
-  de: { /* ... ponechte vaši německou lokalizaci ... */ }
+  en: {}, // Ponechte dle vaší potřeby
+  de: {}  // Ponechte dle vaší potřeby
 };
 
 /* ============ Jazyk ============ */
@@ -49,7 +49,7 @@ function applyLang(lang){
   try{ localStorage.setItem("lang", lang); }catch(e){}
 }
 
-document.getElementById("langSwitch").addEventListener("click", e=>{
+document.getElementById("langSwitch")?.addEventListener("click", e=>{
   const b = e.target.closest("button[data-lang]");
   if(b) applyLang(b.dataset.lang);
 });
@@ -69,8 +69,8 @@ const onScroll = ()=> header.classList.toggle("scrolled", window.scrollY > 20);
 window.addEventListener("scroll", onScroll); onScroll();
 
 const mobileNav = document.getElementById("mobileNav");
-document.getElementById("menuToggle").addEventListener("click", ()=> mobileNav.classList.toggle("open"));
-mobileNav.querySelectorAll("a").forEach(a=> a.addEventListener("click", ()=> mobileNav.classList.remove("open")));
+document.getElementById("menuToggle")?.addEventListener("click", ()=> mobileNav.classList.toggle("open"));
+mobileNav?.querySelectorAll("a").forEach(a=> a.addEventListener("click", ()=> mobileNav.classList.remove("open")));
 
 document.getElementById("year").textContent = new Date().getFullYear();
 
@@ -84,9 +84,9 @@ if(contactForm) {
     const successMsg = document.getElementById("formSuccess");
     const errorMsg = document.getElementById("formError");
 
-    successMsg.classList.add("hidden");
+    if(successMsg) successMsg.classList.add("hidden");
     if(errorMsg) errorMsg.classList.add("hidden");
-    submitBtn.disabled = true;
+    if(submitBtn) submitBtn.disabled = true;
 
     try {
       const payload = Object.fromEntries(new FormData(form).entries());
@@ -97,7 +97,7 @@ if(contactForm) {
       });
 
       if (response.ok) {
-        successMsg.classList.remove("hidden");
+        if(successMsg) successMsg.classList.remove("hidden");
         form.reset();
         setTimeout(() => successMsg.classList.add("hidden"), 6000);
       } else {
@@ -106,7 +106,7 @@ if(contactForm) {
     } catch (err) {
       if(errorMsg) errorMsg.classList.remove("hidden");
     } finally {
-      submitBtn.disabled = false;
+      if(submitBtn) submitBtn.disabled = false;
     }
   });
 }
